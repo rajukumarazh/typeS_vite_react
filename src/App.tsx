@@ -4,7 +4,7 @@ function App() {
 	return (
 		<div className="">
 			<Input />
-			<p className="text-red-600">App</p>
+			{/* <p className="text-red-600">App</p> */}
 		</div>
 	);
 }
