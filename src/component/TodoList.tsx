@@ -6,7 +6,6 @@ function TodoList(props: any) {
 	type simpleTodo = todo_types[];
 	const [updated, setUpdate] = useState<simpleTodo>();
 	console.log('kkkprops', props);
-
 	useEffect(() => setUpdate(() => props?.list), [props]);
 	function todoFilter(id: string): void {
 		let dt = updated?.filter((curr: todo_types) => curr.id !== id);
@@ -19,9 +18,13 @@ function TodoList(props: any) {
 		<div>
 			{updated?.map((curr: any) => {
 				return (
-					<ul>
-						{curr.todo_text}
+					<ul
+						className="ul"
+						style={{ background: 'light-gray', display: 'flex', gap: '24px' }}
+					>
+						<p>{curr.title}</p>
 						<Button
+							style={{ width: '120px' }}
 							color="primary"
 							variant="contained"
 							onClick={() => todoFilter(curr.id)}

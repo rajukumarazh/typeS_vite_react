@@ -1,4 +1,4 @@
 export default interface todo_types {
-	todo_text: string;
+	title: string;
 	id: string;
 }
